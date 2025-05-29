@@ -50,11 +50,11 @@ class _LoginScreenState extends State<LoginScreen> {
 
       if (mounted) {
         if (response.statusCode == 201) {
-          // Extraction et sauvegarde du token
+
           final responseData = jsonDecode(response.body);
           final token = responseData['token'];
 
-          // Stockage du token dans SharedPreferences
+          /
           final prefs = await SharedPreferences.getInstance();
           await prefs.setString('token', token);
 

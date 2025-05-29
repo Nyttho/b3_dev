@@ -1,6 +1,6 @@
 // models/universe.dart
 class Universe {
-  final dynamic id; // Accepte String ou int
+  final dynamic id;
   final String name;
   final String? description;
   final String? image;

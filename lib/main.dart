@@ -5,13 +5,12 @@ import 'package:b3_dev/theme/app_theme.dart';
 import 'package:provider/provider.dart';
 import 'dart:io';
 
-// Global instance of our mock auth service that can be accessed throughout the app
 final mockAuthService = MockAuthService();
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
 
-  // Ajout d'une configuration pour permettre les images HTTP
+
   HttpOverrides.global = MyHttpOverrides();
 
   runApp(
@@ -40,7 +39,6 @@ class MyApp extends StatelessWidget {
   }
 }
 
-// Classe pour permettre les connexions HTTP non sécurisées
 class MyHttpOverrides extends HttpOverrides {
   @override
   HttpClient createHttpClient(SecurityContext? context) {
